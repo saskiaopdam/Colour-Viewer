@@ -1,41 +1,29 @@
-const body = document.querySelector("body");
 const hamburger = document.querySelector(".hamburger");
-const menu = document.querySelector(".menu");
-const figure = document.querySelector(".figure");
+const colors = document.querySelectorAll("input[name='color']");
 
-const menuItemGrey = document.querySelector(".menuItem-grey input");
-const menuItemRed = document.querySelector(".menuItem-red input");
-const menuItemOrange = document.querySelector(".menuItem-orange input");
-const menuItemPurple = document.querySelector(".menuItem-purple input");
-const menuItemGreen = document.querySelector(".menuItem-green input");
-
-const colorLabel = document.querySelector(".colorName");
-
-const changeBodyBackgroundColor = function (colorName) {
-  body.removeAttribute("class");
-  body.classList.add(`body-${colorName}`);
-};
-const displayColorLabel = function (colorName) {
-  colorLabel.innerHTML = "Your favourite color is: " + colorName;
+const toggleMenu = () => {
+  const menu = document.querySelector(".menu");
+  const figure = document.querySelector(".figure");
+  menu.classList.toggle("visible");
+  figure.classList.toggle("hidden");
 };
 
-const onHamburgerClick = function () {
-  menu.classList.toggle("menu-opened");
-  figure.classList.toggle("figure-hidden");
-  body.removeAttribute("class");
-  colorLabel.innerHTML = "";
+const changeBg = (color) => {
+  document.body.removeAttribute("class");
+  document.body.classList.add(`bg-${color}`);
 };
 
-const onMenuItemClick = function (e) {
-  const colorName = e.target.id;
-  changeBodyBackgroundColor(colorName);
-  displayColorLabel(colorName);
+const changeTxt = (color) => {
+  const colorName = document.querySelector(".colorName");
+  colorName.textContent = "";
+  colorName.textContent = color;
 };
 
-hamburger.addEventListener("click", onHamburgerClick);
+const showColor = (e) => {
+  const color = e.target.id;
+  changeBg(color);
+  changeTxt(color);
+};
 
-menuItemGrey.addEventListener("click", (e) => onMenuItemClick(e));
-menuItemRed.addEventListener("click", (e) => onMenuItemClick(e));
-menuItemOrange.addEventListener("click", (e) => onMenuItemClick(e));
-menuItemPurple.addEventListener("click", (e) => onMenuItemClick(e));
-menuItemGreen.addEventListener("click", (e) => onMenuItemClick(e));
+hamburger.addEventListener("click", toggleMenu);
+colors.forEach(color => color.addEventListener("click", showColor));
