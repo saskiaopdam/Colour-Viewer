@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colour Toggle</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato+Light&family=Lexend+Zetta&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8345fa767d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1>Colour Toggle</h1>
+    </header>
+    <main>
+      <p>Choose Your Favorite Colour</p>
+      <i class="fas fa-bars hamburger"></i>
+      <ul class="menu menu-closed">
+        <li class="menuItem menuItem-grey">
+          <input
+            type="radio"
+            class="radioButton"
+            id="grey"
+            name="color"
+            value="grey"
+          />
+          <label for="grey">Grey</label>
+        </li>
+        <li class="menuItem menuItem-red">
+          <input
+            type="radio"
+            class="radioButton"
+            id="red"
+            name="color"
+            value="red"
+          />
+          <label for="red">Red</label>
+        </li>
+        <li class="menuItem menuItem-orange">
+          <input
+            type="radio"
+            class="radioButton"
+            id="orange"
+            name="color"
+            value="orange"
+          />
+          <label for="orange">Orange</label>
+        </li>
+        <li class="menuItem menuItem-purple">
+          <input
+            type="radio"
+            class="radioButton"
+            id="purple"
+            name="color"
+            value="purple"
+          />
+          <label for="purple">Purple</label>
+        </li>
+        <li class="menuItem menuItem-green">
+          <input
+            type="radio"
+            class="radioButton"
+            id="green"
+            name="color"
+            value="green"
+          />
+          <label for="green">Green</label>
+        </li>
+      </ul>
+      <p class="colorName"></p>
+
+      <div class="image-container">
+        <img
+          class="image"
+          src="fatih-kgqu_qs3B78-unsplash.jpg"
+          alt="photo of a painted wall"
+        />
+      </div>
+    </main>
+    <footer>
+      <small>© 2021 Saskia Opdam</small>
+      <small
+        >Photo by
+        <a
+          class="link"
+          href="https://unsplash.com/@gozlukluf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          target="_blank"
+          >Fatih</a
+        >
+        on
+        <a
+          class="link"
+          href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          target="_blank"
+          >Unsplash</a
+        >
+      </small>
+    </footer>
+  </body>
+</html>

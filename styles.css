@@ -1,0 +1,165 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato Light", sans-serif;
+  background-color: grey;
+  color: white;
+}
+
+header {
+  flex: none;
+  padding: 20px;
+}
+
+footer {
+  flex: none;
+  padding: 20px;
+}
+
+main {
+  flex: auto;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-grey,
+.menuItem-grey {
+  background: grey;
+}
+
+.body-red,
+.menuItem-red {
+  background: red;
+}
+
+.body-orange,
+.menuItem-orange {
+  background: orange;
+}
+
+.body-purple,
+.menuItem-purple {
+  background: purple;
+}
+
+.body-green,
+.menuItem-green {
+  background: green;
+}
+
+.colorName {
+  padding: 10px;
+  color: white;
+}
+
+.colorName-hidden {
+  display: none;
+}
+
+.colorName-visible {
+  display: block;
+}
+
+header {
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.hamburger {
+  margin-top: 20px;
+}
+
+.hamburger-hidden {
+  display: none;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: tranparent;
+  color: white;
+}
+
+.image-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.figure-hidden {
+  visibility: hidden;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 100%;
+}
+
+label {
+  font-size: 14px;
+}
+
+.link {
+  color: #aaa;
+}
+
+.menu {
+  list-style-type: none;
+  background-color: transparent;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.menu-closed {
+  visibility: hidden;
+}
+
+.menu-opened {
+  visibility: visible;
+}
+
+.menuItem {
+  padding: 10px;
+  margin: 0 auto;
+  color: #ccc;
+}
+
+.radioButton {
+  margin-right: 5px;
+}
+
+small + small {
+  text-align: right;
+}
