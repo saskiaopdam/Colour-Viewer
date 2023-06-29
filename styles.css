@@ -1,79 +1,85 @@
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html,
 body {
-  height: 100%;
-  min-height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  font-family: "Lato Light", sans-serif;
-  background-color: grey;
-  color: white;
+    font-family: "Cairo Play", sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: 18px;
 }
 
 header {
-  flex: none;
-  padding: 20px;
+    flex-grow: 0;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main {
-  flex: auto;
-  padding: 20px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    flex-grow: 1;
+    background: aqua;
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
+    flex-grow: 0;  
+}
+
+button {
+    border: 1px solid lightgrey;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-text {
+    font-size: 18px;
+    height: 24px;
+    line-height: 24px;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+menu {
+    list-style-type: none;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.removed {
+    display: none;
 }
 
 .bg-grey {
-  background: grey;
+    background: grey;
 }
 
 .bg-red {
-  background: red;
+    background: red;
 }
 
 .bg-orange {
-  background: orange;
+    background: orange;
 }
 
 .bg-purple {
-  background: purple;
+    background: purple;
 }
 
 .bg-green {
-  background: green;
+    background: green;
 }
 
-.colorName {
-  padding: 10px;
-  color: white;
-}
 
-h1 {
-  text-align: center;
-  font-size: 1.5em;
-}
 
-.hamburger {
-  margin-top: 20px;
-}
-
+/* * {
 .figure {
   position: fixed;
   top: 0;
@@ -94,27 +100,10 @@ h1 {
   height: 100%;
 }
 
-label {
-  font-size: 14px;
-}
+
 
 .link {
   color: #aaa;
-}
-
-.menu {
-  list-style-type: none;
-  background-color: transparent;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.hidden {
-  visibility: hidden;
-}
-
-.visible {
-  visibility: visible;
 }
 
 .menuItem {
@@ -129,4 +118,4 @@ label {
 
 small + small {
   text-align: right;
-}
+} */

@@ -1,29 +1,74 @@
-const hamburger = document.querySelector(".hamburger");
+const button = document.querySelector("button");
 const colors = document.querySelectorAll("input[name='color']");
+const menu = document.querySelector("menu");
+const menuIcon = document.querySelector(".menu-icon");
+const closeIcon = document.querySelector(".close-icon");
+const main = document.querySelector("main");
+const colorName = document.querySelector(".colorName");
+
+let menuOpen = false;
+let radioChecked = false;
+let selection;
 
 const toggleMenu = () => {
-  const menu = document.querySelector(".menu");
-  const figure = document.querySelector(".figure");
-  menu.classList.toggle("visible");
-  figure.classList.toggle("hidden");
+    menu.classList.toggle("visible");
+    menuOpen = !menuOpen;
 };
 
-const changeBg = (color) => {
-  document.body.removeAttribute("class");
-  document.body.classList.add(`bg-${color}`);
+const toggleIcon = () => {
+    if (menuOpen) {
+        menuIcon.classList.replace("visible", "removed");
+        closeIcon.classList.replace("removed", "visible");
+    } else {
+        menuIcon.classList.replace("removed", "visible");
+        closeIcon.classList.replace("visible", "removed");
+    }
 };
 
-const changeTxt = (color) => {
-  const colorName = document.querySelector(".colorName");
-  colorName.textContent = "";
-  colorName.textContent = color;
+const undoSelection = () => {
+    selection.checked = false;
+    selection = false;
+    radioChecked = false;
+    main.removeAttribute("class");
+    colorName.textContent = "";
+};
+
+const checkSelection = () => {
+    if (radioChecked) {
+       undoSelection();
+    }
+};
+
+const useToggle = () => {
+    toggleMenu();
+    toggleIcon();
+    checkSelection();
+};
+
+const changeBackground = (color) => {
+    main.removeAttribute("class");
+    main.classList.add(`bg-${color}`);
+};
+
+const changeLabel = (color) => {
+    colorName.textContent = "";
+    colorName.textContent = color;
+};
+
+const saveSelection = (menuItem) => {
+    if (!radioChecked) {
+        radioChecked = true;
+    }    
+    selection = menuItem;
 };
 
 const showColor = (e) => {
-  const color = e.target.id;
-  changeBg(color);
-  changeTxt(color);
+    changeBackground(e.target.value);
+    changeLabel(e.target.value);
+    saveSelection(e.target);
 };
 
-hamburger.addEventListener("click", toggleMenu);
-colors.forEach(color => color.addEventListener("click", showColor));
+(function addListeners () {
+    button.addEventListener("click", useToggle);
+    colors.forEach(color => color.addEventListener("click", showColor));
+})();

@@ -4,21 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Colour Viewer</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato+Light&family=Lexend+Zetta&display=swap" />
-    <script src="https://kit.fontawesome.com/8345fa767d.js" crossorigin="anonymous"></script>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Cairo+Play&display=swap" rel="stylesheet">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- scripts -->
     <script defer src="script.js"></script>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <header>
         <h1>Colour Viewer</h1>
+        <button>
+            <span class="button-text">Menu</span>
+            <span class="material-symbols-outlined menu-icon visible">menu</span>
+            <span class="material-symbols-outlined close-icon removed">close</span>
+        </button>
     </header>
     <main>
-        <p>Select a colour:</p>
-        <i class="fas fa-bars hamburger"></i>
-        <ul class="menu hidden">
-            <li class="menuItem bg-grey">
+        <menu class="hidden">
+            <li>
                 <input
                     type="radio"
                     id="grey"
@@ -28,7 +36,7 @@
                 />
                 <label for="grey">grey</label>
             </li>
-            <li class="menuItem bg-red">
+            <li>
                 <input
                     type="radio"
                     id="red"
@@ -37,8 +45,7 @@
                     value="red"
                 />
                 <label for="red">red</label>
-            </li>
-            <li class="menuItem bg-orange">
+            <li>
                 <input
                     type="radio"
                     id="orange"
@@ -48,7 +55,7 @@
                 />
                 <label for="orange">orange</label>
             </li>
-            <li class="menuItem bg-purple">
+            <li>
                 <input
                     type="radio"
                     id="purple"
@@ -58,7 +65,7 @@
                 />
                 <label for="purple">purple</label>
             </li>
-            <li class="menuItem bg-green">
+            <li>
                 <input
                     type="radio"
                     id="green"
@@ -68,8 +75,10 @@
                 />
                 <label for="green">green</label>
             </li>
-        </ul>
-        <p class="colorName">?</p>
+        </menu>
+        <p class="colorName"></p>
+    </main>
+    <!-- <main>
         <div class="figure">
         <img
             class="image"
@@ -77,10 +86,10 @@
             alt="photo of a painted wall"
         />
         </div>
-    </main>
+    </main> -->
     <footer>
-        <small>© 2021 Saskia Opdam</small>
-        <small>Photo by
+        <small>Design by Saskia</small>
+        <!-- <small>Photo by
             <a
                 class="link"
                 href="https://unsplash.com/@gozlukluf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
@@ -92,7 +101,7 @@
                 href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
                 target="_blank"
             >Unsplash</a>
-        </small>
+        </small> -->
     </footer>
 </body>
 </html>
