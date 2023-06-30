@@ -82,3 +82,8 @@ const showColor = (e) => {
     button.addEventListener("click", useToggle);
     colors.forEach(color => color.addEventListener("click", showColor));
 })();
+
+(function addMenuColors () {
+    colors.forEach(color => console.log(color.value));
+    colors.forEach(color => color.parentElement.classList.add(`bg-${color.value}`));
+})();
