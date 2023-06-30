@@ -1,3 +1,10 @@
+// 100% visibility on (mobile) screen
+window.addEventListener("resize", () => {
+    let vh = window.innerHeight * 0.01;
+    document.body.style.setProperty('--vh', `${vh}px`);
+});
+
+// colour menu
 const button = document.querySelector("button");
 const colors = document.querySelectorAll("input[name='color']");
 const menu = document.querySelector("menu");
