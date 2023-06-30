@@ -1,8 +1,15 @@
 // 100% visibility on (mobile) screen
-window.addEventListener("resize", () => {
+// window.addEventListener("resize", () => {
+//     let vh = window.innerHeight * 0.01;
+//     document.documentElement.style.setProperty('--vh', `${vh}px`);
+// });
+
+const resizeOps = () => {
     let vh = window.innerHeight * 0.01;
-    document.body.style.setProperty('--vh', `${vh}px`);
-});
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+};
+
+window.addEventListener("resize", resizeOps);
 
 // colour menu
 const button = document.querySelector("button");
