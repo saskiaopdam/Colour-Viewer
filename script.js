@@ -51,7 +51,7 @@ const showColorView = (color) => {
 
 const showColorName = (color) => {
     colorName.textContent = "";
-    colorName.textContent = color;
+    colorName.textContent = color.toUpperCase();
 };
 
 const saveColor = (color) => {
