@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <title>Colour Viewer</title>
     <!-- fonts -->
@@ -19,88 +18,94 @@
 <body>
     <header>
         <h1>Colour Viewer</h1>
+    </header>
+    <main>
+        <div class="color-circle">
+            <p class="color-name"></p>
+        </div>
         <button>
-            <span class="button-text">Menu</span>
+            <span class="button-text">Change colour</span>
             <span class="material-symbols-outlined menu-icon visible">menu</span>
             <span class="material-symbols-outlined close-icon removed">close</span>
         </button>
-    </header>
-    <main>
         <menu class="hidden">
             <li>
                 <input
                     type="radio"
                     id="grey"
-                    class="radioButton"
+                    class="radio-button"
                     name="color"
                     value="grey"
+                    checked
                 />
-                <label for="grey">grey</label>
+                <label for="grey">Grey</label>
             </li>
             <li>
                 <input
                     type="radio"
                     id="red"
-                    class="radioButton"
+                    class="radio-button"
                     name="color"
                     value="red"
                 />
-                <label for="red">red</label>
+                <label for="red">Red</label>
             <li>
                 <input
                     type="radio"
                     id="orange"
-                    class="radioButton"
+                    class="radio-button"
                     name="color"
                     value="orange"
                 />
-                <label for="orange">orange</label>
+                <label for="orange">Orange</label>
             </li>
             <li>
                 <input
                     type="radio"
                     id="purple"
-                    class="radioButton"
+                    class="radio-button"
                     name="color"
                     value="purple"
                 />
-                <label for="purple">purple</label>
+                <label for="purple">Purple</label>
             </li>
             <li>
                 <input
                     type="radio"
                     id="green"
-                    class="radioButton"
+                    class="radio-button"
                     name="color"
                     value="green"
                 />
-                <label for="green">green</label>
+                <label for="green">Green</label>
             </li>
         </menu>
-        <p class="colorName"></p>
+        <figure>
+            <img
+                class="image"
+                src="fatih-kgqu_qs3B78-unsplash.jpg"
+                alt="photo of a painted wall"
+            />
+        </figure>
     </main>
     <footer>
-        <small>Design by Saskia</small>
-        <!-- <small>Photo by
-            <a
-                class="link"
-                href="https://unsplash.com/@gozlukluf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-                target="_blank"
-            >Fatih</a>
-            on
-            <a
-                class="link"
-                href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-                target="_blank"
-            >Unsplash</a>
-        </small> -->
+        <small>Design by Saskia</small> |
+        <small
+        >Photo by
+        <a
+          class="link"
+          href="https://unsplash.com/@gozlukluf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          target="_blank"
+          >Fatih</a
+        >
+        on
+        <a
+          class="link"
+          href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          target="_blank"
+          >Unsplash</a
+        >
+      </small>
     </footer>
-    <!-- <figure>
-        <img
-            class="image"
-            src="fatih-kgqu_qs3B78-unsplash.jpg"
-            alt="photo of a painted wall"
-        />
-    </figure> -->
 </body>
 </html>

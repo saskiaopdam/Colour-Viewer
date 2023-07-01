@@ -8,7 +8,6 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    font-size: 18px;
 }
 
 header {
@@ -16,57 +15,67 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 1em;
+    background-color: white;
 }
 
 main {
     flex-grow: 1;
-    background: lightgrey;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    padding: 2em;
+    color: white;
 }
 
 footer {
     flex-grow: 0;
     text-align: center;
+    background-color: white;
+}
+
+a {
+    color: black;
 }
 
 button {
     border: none;
-    background-color: transparent;
+    background-color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 2em;
 }
 
 .button-text {
-    font-size: 18px;
-    height: 24px;
+    font-size: 14px;
     line-height: 24px;
     padding-right: 6px;
     padding-left: 6px;
 }
 
 menu {
-    list-style-type: none;
-    padding: 0;
+    margin: 0;
+    padding-left: 0;
+    font-weight: bold;
 }
 
 li {
-    padding: 0.25em 1em;
-    color: lightgrey;
-    margin: 0.5em;
-    border: 1px solid lightgrey;
-    font-size: 16px;
+    display: flex;
+    align-items: center;
 }
 
-li + li {
-    margin-bottom: 0.5em;
+.radio-button {
+    margin-right: 1em;
 }
 
-.radioButton {
-    margin-right: 0.5em;
+.color-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    margin-bottom: 2em;
 }
 
 .hidden {
@@ -101,40 +110,20 @@ li + li {
     background: green;
 }
 
-/* figure {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  opacity: 0.5;
-  margin: 0;
-} */
-
-/* img {
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  height: 100%;
-} */
-
-/* .link {
-  color: #aaa;
+figure {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
 }
 
-.menuItem {
-  padding: 10px;
-  margin: 0 auto;
-  color: #ccc;
+img {
+    height: 100%;
 }
-
-.radioButton {
-  margin-right: 5px;
-}
-
-small + small {
-  text-align: right; */
-/* } */

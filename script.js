@@ -8,19 +8,21 @@ resizeOps();
 window.addEventListener("resize", resizeOps);
 
 // colour menu
-const button = document.querySelector("button");
-const colors = document.querySelectorAll("input[name='color']");
+const colors = document.querySelectorAll("input");
+const colorSquare = document.body;
+const colorCircle = document.querySelector(".color-circle");
+const colorName = document.querySelector(".color-name");
+const form = document.querySelector("form");
+const toggle = document.querySelector("button");
 const menu = document.querySelector("menu");
 const menuIcon = document.querySelector(".menu-icon");
 const closeIcon = document.querySelector(".close-icon");
-const main = document.querySelector("main");
-const colorName = document.querySelector(".colorName");
 
 let menuOpen = false;
-let radioChecked = false;
-let selection;
+let savedColor;
 
 const toggleMenu = () => {
+    console.log("menu toggled");
     menu.classList.toggle("visible");
     menuOpen = !menuOpen;
 };
@@ -35,55 +37,43 @@ const toggleIcon = () => {
     }
 };
 
-const undoSelection = () => {
-    selection.checked = false;
-    selection = false;
-    radioChecked = false;
-    main.removeAttribute("class");
-    colorName.textContent = "";
-};
-
-const checkSelection = () => {
-    if (radioChecked) {
-       undoSelection();
-    }
-};
-
 const useToggle = () => {
     toggleMenu();
     toggleIcon();
-    checkSelection();
 };
 
-const changeBackground = (color) => {
-    main.removeAttribute("class");
-    main.classList.add(`bg-${color}`);
+const showColorView = (color) => {
+    colorSquare.classList.remove(`bg-${savedColor}`);
+    colorSquare.classList.add(`bg-${color}`);
+    colorCircle.classList.remove(`bg-${savedColor}`);
+    colorCircle.classList.add(`bg-${color}`);
 };
 
-const changeLabel = (color) => {
+const showColorName = (color) => {
     colorName.textContent = "";
     colorName.textContent = color;
 };
 
-const saveSelection = (menuItem) => {
-    if (!radioChecked) {
-        radioChecked = true;
-    }    
-    selection = menuItem;
+const saveColor = (color) => {
+    savedColor = color;
+    console.log("saved color: ", savedColor);
 };
 
-const showColor = (e) => {
-    changeBackground(e.target.value);
-    changeLabel(e.target.value);
-    saveSelection(e.target);
+const showColor = (color) => {
+    showColorView(color);
+    showColorName(color);
+    saveColor(color);
 };
 
 (function addListeners () {
-    button.addEventListener("click", useToggle);
-    colors.forEach(color => color.addEventListener("click", showColor));
+    toggle.addEventListener("click", useToggle);
+    colors.forEach(color => color.addEventListener("click", (e) => showColor(e.target.value)));
 })();
 
-(function addMenuColors () {
-    colors.forEach(color => console.log(color.value));
-    colors.forEach(color => color.parentElement.classList.add(`bg-${color.value}`));
+(function showDefaultColor () {
+    colors.forEach(color => {
+        if (color.checked) {
+            showColor(color.value);
+        }
+    });
 })();
