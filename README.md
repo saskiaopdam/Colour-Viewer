@@ -3,7 +3,7 @@
 
 ## Deploy
 
-Bekijk de [APP LIVE](https://colour-viewer-winc-fe-remake.netlify.app) op Netlify.
+Bekijk de [APP LIVE](https://colour-viewer.netlify.app/) op Netlify.
 
 ## Doel
 
