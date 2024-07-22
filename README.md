@@ -1,4 +1,4 @@
-# Colour Viewer Remake
+# Winc Colour Viewer
 *Winc Academy basic JavaScript opdracht (remake)* 
 
 ## Deploy
